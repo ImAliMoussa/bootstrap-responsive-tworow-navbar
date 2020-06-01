@@ -1,0 +1,71 @@
+<!doctype html>
+<html lang="en">
+
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <title>POSH</title>
+</head>
+
+<body>
+
+  <nav class="container-fluid">
+    <div class="row bg-dark navbar-dark navbar-expand-lg">
+
+      <!-- top row logo div -->
+      <div class="col-6 offset-3 col-md-12 offset-md-0 bg-danger text-center">
+        <h1>hi</h1>
+      </div>
+
+      <!-- top right div that only shows on small screens -->
+      <div class="d-md-none col-3 " id="trdiv">
+        <button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-bottom-row"
+          aria-controls="navbar-bottom-row" aria-expanded="false" aria-label="Toggle navigation">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+      </div>
+
+      <!-- bottom row div that collapses on small screens -->
+      <nav class="col-12 col-md-12 offset-md-0 bg-danger collapse show text-center" id="navbar-bottom-row">
+        <h1>hi</h1>
+      </nav>
+
+    </div>
+  </nav>
+
+  <div>
+
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <script>
+
+      $(document).ready(function () {
+        let resizeTimer;
+        const divEl = $('#trdiv');
+        const bottom_row = $('#navbar-bottom-row');
+        const milliseconds = 150;
+
+        const collapseOnResize = () => {
+          console.log('function is called');
+          if (divEl.is(':visible')) {
+            bottom_row.collapse('hide');
+          } else {
+            bottom_row.collapse('show');
+          }
+        }
+        $(window).on('resize', function (e) {
+          clearTimeout(resizeTimer);
+          resizeTimer = setTimeout(collapseOnResize, milliseconds);
+        });
+      });
+
+
+
+
+    </script>
+  </div>
+</body>
+
+</html>
