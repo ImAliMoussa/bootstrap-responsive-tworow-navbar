@@ -39,32 +39,7 @@
     <script src="node_modules/jquery/dist/jquery.min.js"></script>
     <script src="node_modules/popper.js/dist/umd/popper.min.js"></script>
     <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
-    <script>
-
-      $(document).ready(function () {
-        let resizeTimer;
-        const divEl = $('#trdiv');
-        const bottom_row = $('#navbar-bottom-row');
-        const milliseconds = 150;
-
-        const collapseOnResize = () => {
-          console.log('function is called');
-          if (divEl.is(':visible')) {
-            bottom_row.collapse('hide');
-          } else {
-            bottom_row.collapse('show');
-          }
-        }
-        $(window).on('resize', function (e) {
-          clearTimeout(resizeTimer);
-          resizeTimer = setTimeout(collapseOnResize, milliseconds);
-        });
-      });
-
-
-
-
-    </script>
+    <script src="js/myscript.js"></script>
   </div>
 </body>
 
