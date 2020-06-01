@@ -1,0 +1,4 @@
+/* currently not using this class but might want this later */
+.no-transition {
+    transition: none !important;
+}

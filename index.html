@@ -5,13 +5,14 @@
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
   <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/style.css">
   <title>POSH</title>
 </head>
 
 <body>
 
   <nav class="container-fluid">
-    <div class="row bg-dark navbar-dark navbar-expand-lg">
+    <div class="row navbar-dark bg-dark">
 
       <!-- top row logo div -->
       <div class="col-6 offset-3 col-md-12 offset-md-0 bg-danger text-center">
@@ -20,14 +21,16 @@
 
       <!-- top right div that only shows on small screens -->
       <div class="d-md-none col-3 " id="trdiv">
-        <button class=" navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-bottom-row"
-          aria-controls="navbar-bottom-row" aria-expanded="false" aria-label="Toggle navigation">
-          <span class="navbar-toggler-icon"></span>
-        </button>
+        <div class="row h-100">
+          <button class="btn btn-block navbar-toggler" type="button" data-toggle="collapse" data-target="#navbar-bottom-row"
+            aria-controls="navbar-bottom-row" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+          </button>
+        </div>
       </div>
 
       <!-- bottom row div that collapses on small screens -->
-      <nav class="col-12 col-md-12 offset-md-0 bg-danger collapse show text-center" id="navbar-bottom-row">
+      <nav class="col-12 bg-danger text-center navbar-collapse collapse" id="navbar-bottom-row">
         <h1>hi</h1>
       </nav>
 
