@@ -11,7 +11,6 @@ $(document).ready(function () {
         }
     }
     
-    
     // call on init in case window was opened initially in a small screen
     collapseOnResize(); 
     
